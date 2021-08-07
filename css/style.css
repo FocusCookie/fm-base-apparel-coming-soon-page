@@ -1,0 +1,150 @@
+:root {
+  --gradient-primary: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+  --gradient-background: linear-gradient(150.03deg, #ffffff 0%, #fff4f4 84.51%);
+
+  --primary-dark: #ce9898;
+  --primary: #ee8b8b;
+
+  --color-error: #f96464;
+  --color-white: #fff;
+  --color-dark: #423a3a;
+  --color-background: #fafafa;
+
+  --shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+
+  --radius: 28px;
+
+  --font-family: Josefin Sans;
+
+  --text-bold: 600;
+  --text-normal: 400;
+  --text-light: 300;
+
+  --text-size: 14px;
+  --text-line-height: 22px;
+  --text-letter-spacing-h1: 10.8254px;
+
+  --border: 2px solid;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: var(--text-size);
+  font-weight: var(--text-normal);
+  line-height: var(--text-line-height);
+  color: var(--primary-dark);
+}
+
+*,
+*::before,
+*::after {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+body {
+  background: var(--gradient-background);
+}
+
+header {
+  padding: 32px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.section-picture {
+  background-image: url("../images/hero-mobile.jpg");
+  min-height: 250px;
+  margin-bottom: 32px;
+}
+
+.section-content {
+  padding: 32px;
+}
+
+.section-content > article > p {
+  padding-top: 16px;
+}
+
+.section-form {
+  margin: 0px 32px 64px 32px;
+}
+
+form {
+  border: var(--border);
+
+  border-radius: var(--radius);
+  border-color: var(--primary-dark);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+form > input {
+  border: none;
+  background: none;
+  border-radius: var(--radius);
+  height: 48px;
+  line-height: 48px;
+  flex-grow: 1;
+  text-indent: 24px;
+}
+
+input:focus {
+  outline: none;
+}
+form > button {
+  background: var(--gradient-primary);
+  border-radius: var(--radius);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 48px;
+  z-index: 100;
+  transform: scale(1.1);
+  box-shadow: var(--shadow);
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 2.8571em;
+  line-height: 1em;
+}
+
+.text--dark {
+  color: var(--color-dark);
+}
+.text--error {
+  color: var(--color-error);
+}
+.text--upercase {
+  text-transform: uppercase;
+}
+.text--light {
+  font-weight: var(--text-light);
+}
+.text--bold {
+  font-weight: var(--text-bold);
+}
+.text--center {
+  text-align: center;
+}
+.text--letter-spacing {
+  letter-spacing: var(--text-letter-spacing-h1);
+}
