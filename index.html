@@ -44,14 +44,18 @@
     </section>
 
     <section class="section-form">
-      <form action="#">
-        <input type="text" />
+      <form action="javascript:void(0);">
+        <input type="text" id="email" />
         <img class="hidden" src="./images/icon-error.svg" alt="Error Icon" />
-        <button>
+        <button id="submit">
           <img src="./images/icon-arrow.svg" alt="Right headed arrow icon" />
         </button>
       </form>
-      <p class="error text--error hidden">error message</p>
+      <p id="errorMsg" class="error text--error hidden">
+        Please provide a valid email
+      </p>
     </section>
+
+    <script src="./js/form.js"></script>
   </body>
 </html>
