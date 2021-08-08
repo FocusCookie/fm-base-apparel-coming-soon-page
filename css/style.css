@@ -71,6 +71,7 @@ header {
 
 .section-content {
   padding: 32px;
+  text-align: center;
 }
 
 .section-content > article > p {
@@ -149,9 +150,86 @@ h1 {
 .text--bold {
   font-weight: var(--text-bold);
 }
-.text--center {
-  text-align: center;
-}
 .text--letter-spacing {
   letter-spacing: var(--text-letter-spacing-h1);
+}
+
+@media (min-width: 375px) {
+  .section-picture {
+    background-image: url("../images/hero-desktop.jpg");
+    background-size: cover;
+  }
+}
+
+@media (min-width: 800px) {
+  *,
+  body {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  body {
+    max-height: 100vh;
+    background: url("../images/bg-pattern-desktop.svg"),
+      var(--gradient-background);
+    background-size: auto;
+    background-position: top left;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: start;
+    padding-left: 11.45%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    min-height: 0; /* NEW */
+    min-width: 0; /* NEW; needed for Firefox */
+    grid-template-areas:
+      "header picture"
+      "content picture"
+      "form picture";
+    column-gap: 2rem;
+  }
+
+  header {
+    padding: 75px 0 68px 0;
+    grid-area: header;
+  }
+
+  .logo {
+    max-height: 33px;
+    width: 158px;
+  }
+
+  .section-content {
+    padding: 68px 0 40px 0;
+    text-align: left;
+    grid-area: content;
+    max-width: 444px;
+    max-height: 444px;
+  }
+  .section-form {
+    grid-area: form;
+    max-width: 444px;
+    max-height: 100px;
+    margin: 0;
+  }
+  .section-picture {
+    background-image: url("../images/hero-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    max-width: 610px;
+    grid-area: picture;
+  }
+
+  h1 {
+    font-size: 4.5em;
+    line-height: 1em;
+  }
+
+  form > button {
+    width: 98px;
+    height: 55px;
+    transform: scale(1.1);
+  }
 }
